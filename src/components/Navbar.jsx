@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -23,24 +23,27 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                       <NavLink to='/'>Home</NavLink>
-                       <NavLink to='/find-tutors'>Find Tutors</NavLink>
-                       <NavLink to='/add-tutorials'>Add Tutorials</NavLink>
-                       <NavLink to='/my-tutorials'>My Tutorials</NavLink>
-                       <NavLink to='/my-booked-tutors'>My booked tutors</NavLink>
+                        <li><NavLink to='/'>Home</NavLink></li>
+                        <li><NavLink to='/find-tutors'>Find Tutors</NavLink></li>
+                        <li><NavLink to='/add-tutorials'>Add Tutorials</NavLink></li>
+                        <li><NavLink to='/my-tutorials'>My Tutorials</NavLink></li>
+                        <li><NavLink to='/my-booked-tutors'>My booked tutors</NavLink></li>
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">LearnEx</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
-                    
-                    <li><a>Item 3</a></li>
+                    <li><NavLink to='/'>Home</NavLink></li>
+                    <li><NavLink to='/find-tutors'>Find Tutors</NavLink></li>
+                    <li><NavLink to='/add-tutorials'>Add Tutorials</NavLink></li>
+                    <li><NavLink to='/my-tutorials'>My Tutorials</NavLink></li>
+                    <li><NavLink to='/my-booked-tutors'>My Booked Tutors</NavLink></li>
+
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Login</a>
+                <Link to='/login' className="btn">Login</Link>
             </div>
         </div>
     );

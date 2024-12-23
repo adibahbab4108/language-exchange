@@ -5,11 +5,15 @@ import FindTutors from "../pages/FindTutors";
 import AddTutorials from "../pages/AddTutorials";
 import MyTutorials from "../pages/MyTutorials";
 import MyBookedTutors from "../pages/MyBookedTutors";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
+import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout />,
+        errorElement:<ErrorPage/>,
         children: [
             {
                 path: '/',
@@ -28,10 +32,19 @@ const router = createBrowserRouter([
                 element: <MyTutorials />
             },
             {
-                path:'/my-booked-tutors',
-                element:<MyBookedTutors/>
+                path: '/my-booked-tutors',
+                element: <MyBookedTutors />
+            },
+            {
+                path: '/login',
+                element: <Login />
+            },
+            {
+                path: '/register',
+                element: <Register />
             }
         ]
     },
+    
 ]);
 export default router
