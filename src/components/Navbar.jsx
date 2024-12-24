@@ -6,10 +6,6 @@ import { FaUser } from 'react-icons/fa';
 const Navbar = () => {
     const { user, loading, logOut } = useContext(authContext)
 
-
-    if (!loading)
-        console.log(user.email)
-
     const handleLogOut = () => {
         logOut()
             .then(() => {
@@ -48,7 +44,7 @@ const Navbar = () => {
                         <li><NavLink to='/my-booked-tutors'>My booked tutors</NavLink></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">LearnEx</a>
+                <Link to="/" className="btn btn-ghost text-xl">LearnEx</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

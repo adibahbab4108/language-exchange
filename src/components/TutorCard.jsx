@@ -1,4 +1,5 @@
 import { FaGraduationCap, FaUser } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const TutorCard = ({ tutor }) => {
     const { name, email, image, language, description, review, price } = tutor;
@@ -39,7 +40,7 @@ const TutorCard = ({ tutor }) => {
                         </div>
                     </div>
                     <div className="mt-4">
-                        <button className="btn btn-primary w-full">Book a lesson</button>
+                        <Link to="/tutor/:details" className="btn btn-primary w-full">Details</Link>
                     </div>
                 </div>
             </div>

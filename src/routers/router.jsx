@@ -11,6 +11,7 @@ import ErrorPage from "../pages/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
 import FindTutorsByCategory from "../pages/FindTutorsByCategory";
 import axios from "axios";
+import UpdateTutorial from "../pages/UpdateTutorial";
 
 const router = createBrowserRouter([
     {
@@ -29,7 +30,6 @@ const router = createBrowserRouter([
             {
                 path: '/find-tutors/:category',
                 element: <FindTutorsByCategory />,
-                // loader: ()=>axios.get()
             },
             {
                 path: '/add-tutorials',
@@ -43,7 +43,11 @@ const router = createBrowserRouter([
                 path: '/my-booked-tutors',
                 element: <MyBookedTutors />
             },
-
+            {
+                path: '/update/:id',
+                element: <UpdateTutorial />,
+                loader: ({ params }) => axios.get(`${import.meta.env.VITE_API_URL}/tutor/${params.id}`)
+            },
             {
                 path: '/login',
                 element: <Login />
