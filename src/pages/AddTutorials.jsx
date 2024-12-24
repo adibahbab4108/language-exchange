@@ -1,11 +1,10 @@
 import axios from 'axios'
+import { useContext } from 'react';
+import { toast } from 'react-toastify';
+import { authContext } from '../provider/AuthProvider';
 
 const AddTutorials = () => {
-    const user = {
-        name: "Adib Ahbab",
-        email: "adibahbab@gmail.com",
-        review: 0
-    }
+    const { user } = useContext(authContext)
 
 
     const handleSubmit = async (e) => {
@@ -21,8 +20,14 @@ const AddTutorials = () => {
 
         const formData = { name, email, image, language, price, description, review }
 
-        const { data } =await axios.post(`${import.meta.env.VITE_API_URL}/add-tutorials`, formData)
-        console.log(data);
+        try {
+            const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/add-tutorials`, formData)
+            console.log(data);
+            toast.success('Added Successfully!')
+            form.reset();
+        } catch (err) {
+            toast.error(err)
+        }
 
     };
 
@@ -39,7 +44,7 @@ const AddTutorials = () => {
                             <input
                                 type="text"
                                 name="name"
-                                value={user.name}
+                                value={user.name || "New User"}
                                 className="input input-bordered"
                                 readOnly
                             />

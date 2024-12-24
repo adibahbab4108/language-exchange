@@ -1,7 +1,25 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { authContext } from '../provider/AuthProvider';
+import { FaUser } from 'react-icons/fa';
 
 const Navbar = () => {
+    const { user, loading, logOut } = useContext(authContext)
+
+
+    if (!loading)
+        console.log(user.email)
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                alert('Logged Out Successfully')
+                window.location.reload();
+            }).catch((error) => {
+                alert(error)
+            });
+    }
+
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -43,7 +61,21 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/login' className="btn">Login</Link>
+                {user ?
+                    <>
+                        <h3 className='font-bold mr-1'>Hello, </h3>
+
+                        <div className="dropdown dropdown-hover dropdown-end">
+                            <div tabIndex={0} role="button" className="btn m-1"> <FaUser /></div>
+                            <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                                <li><a>User Name</a></li>
+                                <li onClick={handleLogOut}> <a >Logout</a></li>
+                            </ul>
+                        </div>
+                    </> :
+                    <>
+                        <Link to='/login' className="btn">Login</Link>
+                    </>}
             </div>
         </div>
     );

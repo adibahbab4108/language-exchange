@@ -13,6 +13,10 @@ const Register = () => {
                 const user = userCredential.user;
                 console.log(user)
             })
+            .catch(error => {
+                alert(error)
+                return
+            })
     }
     return (
         <div className="hero min-h-screen bg-base-200">

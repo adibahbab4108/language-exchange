@@ -1,19 +1,12 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+
 import TutorCard from "../components/TutorCard";
 import NoDataAvailabe from "../components/NoDataAvailabe";
+import { useContext } from "react";
+import { dataContext } from "../provider/DataProvider";
 
 const FindTutors = () => {
-    const [tutors, setTutors] = useState([]);
-    useEffect(() => {
-        fetchAllTutorials()
-    }, [])
+    const { tutors } = useContext(dataContext)
 
-    const fetchAllTutorials = async () => {
-        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/find-tutors`)
-        setTutors(data)
-    }
-    console.log(tutors)
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 container mx-auto">
             {

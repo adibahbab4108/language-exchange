@@ -8,12 +8,15 @@ import MyBookedTutors from "../pages/MyBookedTutors";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import ErrorPage from "../pages/ErrorPage";
+import PrivateRoute from "./PrivateRoute";
+import FindTutorsByCategory from "../pages/FindTutorsByCategory";
+import axios from "axios";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout />,
-        errorElement:<ErrorPage/>,
+        errorElement: <ErrorPage />,
         children: [
             {
                 path: '/',
@@ -24,17 +27,23 @@ const router = createBrowserRouter([
                 element: <FindTutors />
             },
             {
+                path: '/find-tutors/:category',
+                element: <FindTutorsByCategory />,
+                // loader: ()=>axios.get()
+            },
+            {
                 path: '/add-tutorials',
-                element: <AddTutorials />
+                element: <PrivateRoute><AddTutorials /></PrivateRoute>
             },
             {
                 path: '/my-tutorials',
-                element: <MyTutorials />
+                element: <PrivateRoute> <MyTutorials /></PrivateRoute>
             },
             {
                 path: '/my-booked-tutors',
                 element: <MyBookedTutors />
             },
+
             {
                 path: '/login',
                 element: <Login />
@@ -45,6 +54,6 @@ const router = createBrowserRouter([
             }
         ]
     },
-    
+
 ]);
 export default router

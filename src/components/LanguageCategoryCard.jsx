@@ -1,11 +1,14 @@
+import { useContext } from "react";
 import { TfiAgenda, TfiAngleRight } from "react-icons/tfi";
 import { Link } from "react-router-dom";
+import { dataContext } from "../provider/DataProvider";
 
 const LanguageCategoryCard = ({ languageCategory }) => {
-    const { title, numberOfTeachers, icon } = languageCategory;
+    const { title, numberOfTeachers, icon, category } = languageCategory;
+    // const {tutorsByCategory} =useContext(dataContext)
 
     return (
-        <Link>
+        <Link to={`/find-tutors/${languageCategory.category}`} state={category} >
             <div>
                 <div className="flex border gap-3 p-4">
                     <div className="place-content-center">

@@ -1,19 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import LanguageCategoryCard from "./LanguageCategoryCard";
+import { dataContext } from "../provider/DataProvider";
 const LanguageCategory = () => {
-    const [languageCategories, setLanguageCategories] = useState([]);
-
-    useEffect(() => {
-        fetch('/languageCategories.json')
-            .then(response => response.json())
-            .then(data => setLanguageCategories(data.languageCategories))
-            .catch(error => alert('Error fetching JSON:', error));
-    }, []);
+    const { languageCategories } = useContext(dataContext)
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 container mx-auto mt-14">
             {
-                languageCategories.map((languageCategory,idx) => <LanguageCategoryCard key={idx} languageCategory={languageCategory} />)
+                languageCategories.map((languageCategory, idx) => <LanguageCategoryCard key={idx} languageCategory={languageCategory} />)
             }
 
         </div>

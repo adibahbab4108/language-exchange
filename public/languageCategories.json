@@ -3,47 +3,56 @@
       {
         "title": "English Tutors",
         "numberOfTeachers": 25,
-        "icon": "https://img.icons8.com/?size=50&id=1239&format=png"
+        "icon": "https://img.icons8.com/?size=50&id=1239&format=png",
+        "category":"english"
       },
       {
         "title": "Spanish Tutors",
         "numberOfTeachers": 18,
-        "icon": "https://img.icons8.com/?size=80&id=HPvt6sLwRkj7&format=png"
+        "icon": "https://img.icons8.com/?size=80&id=HPvt6sLwRkj7&format=png",
+        "category":"spanish"
       },
       {
         "title": "French Tutors",
         "numberOfTeachers": 15,
-        "icon": "https://img.icons8.com/?size=50&id=4676&format=png"
+        "icon": "https://img.icons8.com/?size=50&id=4676&format=png",
+        "category":"french"
       },
       {
         "title": "German Tutors",
         "numberOfTeachers": 12,
-        "icon": "https://img.icons8.com/?size=50&id=41496&format=png"
+        "icon": "https://img.icons8.com/?size=50&id=41496&format=png",
+        "category":"german"
       },
       {
         "title": "Mandarin Tutors",
         "numberOfTeachers": 20,
-        "icon": "https://img.icons8.com/?size=50&id=24640&format=png"
+        "icon": "https://img.icons8.com/?size=50&id=24640&format=png",
+        "category":"mandarin"
       },
       {
         "title": "Japanese Tutors",
         "numberOfTeachers": 10,
-        "icon": "https://img.icons8.com/?size=50&id=59402&format=png"
+        "icon": "https://img.icons8.com/?size=50&id=59402&format=png",
+        "category":"japanese"
       },
       {
         "title": "Korean Tutors",
         "numberOfTeachers": 8,
-        "icon": "https://img.icons8.com/?size=80&id=ACnc2ToIyq0Z&format=png"
+        "icon": "https://img.icons8.com/?size=80&id=ACnc2ToIyq0Z&format=png",
+        "category":"korean"
       },
       {
         "title": "Italian Tutors",
         "numberOfTeachers": 6,
-        "icon": "https://img.icons8.com/?size=50&id=40917&format=png"
+        "icon": "https://img.icons8.com/?size=50&id=40917&format=png",
+        "category":"italian"
       },
       {
         "title": "Russian Tutors",
         "numberOfTeachers": 7,
-        "icon": "https://img.icons8.com/?size=50&id=23660&format=png"
+        "icon": "https://img.icons8.com/?size=50&id=23660&format=png",
+        "category":"russian"
       }
     ]
   }
