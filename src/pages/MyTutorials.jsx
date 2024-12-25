@@ -41,9 +41,11 @@ const MyTutorials = () => {
                     {/* head */}
                     <thead>
                         <tr>
+                            <th></th>
                             <th>Profile</th>
                             <th>Name</th>
                             <th>Teaches</th>
+                            <th>Price</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -51,9 +53,11 @@ const MyTutorials = () => {
                         {
                             postedTutorials.map((tutorial, index) => (
                                 <tr key={index}>
+                                    <td>{index + 1}</td>
                                     <td><img src={tutorial.image} alt="" className='w-14 rounded-full ' /></td>
                                     <td>{tutorial.name}</td>
                                     <td>{tutorial.language}</td>
+                                    <td>${tutorial.price || "null"}</td>
                                     <td className='flex items-center gap-2'>
                                         <button onClick={() => handleDelete(tutorial._id)}>
                                             <MdDelete className="text-red-500 text-2xl" />

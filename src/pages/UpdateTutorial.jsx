@@ -1,31 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useLoaderData, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const UpdateTutorial = () => {
     const updateData = useLoaderData()
 
     const { _id, name, email, image, language, price, review, description } = updateData.data
-    const [tutorial, setTutorial] = useState({
-        name: '',
-        email: '',
-        image: '',
-        language: '',
-        price: '',
-        description: '',
-        review: '',
-    });
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setTutorial((prev) => ({ ...prev, [name]: value }));
-    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        const form = e.target;
+        const image = form.image.value;
+        const language = form.language.value;
+        const price = form.price.value;
+        const description = form.description.value;
+        const newFormData = { image, language, price, description }
+
         try {
-            await axios.put(`${import.meta.env.VITE_API_URL}/tutorials/${tutorialId}`, tutorial);
-            alert('Tutorial updated successfully!');
+            const { data } = await axios.put(`${import.meta.env.VITE_API_URL}/update-tutorial/${_id}`, newFormData);
+            console.log(data)
+            if (data.modifiedCount > 0)
+                toast.success('Tutorial updated successfully!');
+            else return toast.error("Failed to update")
         } catch (error) {
             console.error('Error updating tutorial:', error);
         }
@@ -40,7 +38,7 @@ const UpdateTutorial = () => {
                     <input
                         type="text"
                         name="name"
-                        value={name}
+                        defaultValue={name}
                         readOnly
                         className="mt-1 p-2 w-full border rounded bg-gray-200 cursor-not-allowed"
                     />
@@ -50,7 +48,7 @@ const UpdateTutorial = () => {
                     <input
                         type="text"
                         name="email"
-                        value={email}
+                        defaultValue={email}
                         readOnly
                         className="mt-1 p-2 w-full border rounded bg-gray-200 cursor-not-allowed"
                     />
@@ -60,8 +58,7 @@ const UpdateTutorial = () => {
                     <input
                         type="text"
                         name="image"
-                        value={image}
-                        onChange={handleChange}
+                        defaultValue={image}
                         className="mt-1 p-2 w-full border rounded"
                     />
                 </div>
@@ -69,9 +66,8 @@ const UpdateTutorial = () => {
                     <label className="block text-gray-700">Language</label>
                     <select
                         name="language"
-                        // value={formData.language}
-                        // onChange={handleChange}
                         className="input input-bordered w-full"
+                        defaultValue={language}
                     >
                         <option value="" disabled>Select a language</option>
                         <option value="English">English</option>
@@ -90,8 +86,7 @@ const UpdateTutorial = () => {
                     <input
                         type="text"
                         name="price"
-                        value={price}
-                        onChange={handleChange}
+                        defaultValue={price}
                         className="mt-1 p-2 w-full border rounded"
                     />
                 </div>
@@ -99,8 +94,7 @@ const UpdateTutorial = () => {
                     <label className="block text-gray-700">Description</label>
                     <textarea
                         name="description"
-                        value={description}
-                        onChange={handleChange}
+                        defaultValue={description}
                         className="mt-1 p-2 w-full border rounded"
                     ></textarea>
                 </div>
@@ -109,7 +103,7 @@ const UpdateTutorial = () => {
                     <input
                         type="text"
                         name="review"
-                        value={review}
+                        defaultValue={review}
                         readOnly
                         className="mt-1 p-2 w-full border rounded bg-gray-200 cursor-not-allowed"
                     />
