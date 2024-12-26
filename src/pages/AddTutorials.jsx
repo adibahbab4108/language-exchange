@@ -6,7 +6,6 @@ import { authContext } from '../provider/AuthProvider';
 const AddTutorials = () => {
     const { user } = useContext(authContext)
 
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         const form = e.target;
@@ -22,19 +21,17 @@ const AddTutorials = () => {
 
         try {
             const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/add-tutorials`, formData)
-            console.log(data);
             toast.success('Added Successfully!')
             form.reset();
         } catch (err) {
             toast.error(err)
         }
-
     };
 
 
     return (
         <div className="min-h-screen bg-base-200">
-            <div className="hero-content flex-col lg:flex-row">
+            <div className="hero-content flex-col lg:flex-row mx-auto">
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <form className="card-body" onSubmit={handleSubmit}>
                         <div className="form-control">
@@ -44,7 +41,7 @@ const AddTutorials = () => {
                             <input
                                 type="text"
                                 name="name"
-                                value={user.name || "New User"}
+                                value={user.displayName || "New User"}
                                 className="input input-bordered"
                                 readOnly
                             />

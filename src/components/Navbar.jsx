@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { authContext } from '../provider/AuthProvider';
 import { FaUser } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
     const { user, loading, logOut } = useContext(authContext)
@@ -59,12 +60,18 @@ const Navbar = () => {
             <div className="navbar-end">
                 {user ?
                     <>
-                        <h3 className='font-bold mr-1'>Hello, </h3>
+                        <h3 className=' mr-1'>Hello, {user?.displayName} </h3>
 
                         <div className="dropdown dropdown-hover dropdown-end">
-                            <div tabIndex={0} role="button" className="btn m-1"> <FaUser /></div>
+                            <div tabIndex={0} role="button" className=" m-1">
+                                {
+                                    user?.photoURL ? <img className='w-14' src={user?.photoURL} alt="profile" />
+                                        : <FaUser />
+                                }
+
+                            </div>
                             <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-                                <li><a>User Name</a></li>
+                                <li onClick={() => { toast("this feature will be availabe soon!") }}><a>Update Profile</a></li>
                                 <li onClick={handleLogOut}> <a >Logout</a></li>
                             </ul>
                         </div>

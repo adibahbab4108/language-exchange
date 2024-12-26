@@ -12,6 +12,7 @@ import PrivateRoute from "./PrivateRoute";
 import FindTutorsByCategory from "../pages/FindTutorsByCategory";
 import axios from "axios";
 import UpdateTutorial from "../pages/UpdateTutorial";
+import TutorDetails from "../pages/TutorDetails";
 
 const router = createBrowserRouter([
     {
@@ -41,12 +42,19 @@ const router = createBrowserRouter([
             },
             {
                 path: '/my-booked-tutors',
-                element: <MyBookedTutors />
+                element: <PrivateRoute>
+                    <MyBookedTutors />,
+                </PrivateRoute>
             },
             {
                 path: '/update/:id',
                 element: <UpdateTutorial />,
                 loader: ({ params }) => axios.get(`${import.meta.env.VITE_API_URL}/tutor/${params.id}`)
+            },
+            {
+                path: '/tutor/:details',
+                element: <TutorDetails />,
+                loader: ({ params }) => axios.get(`${import.meta.env.VITE_API_URL}/tutor/${params.details}`)
             },
             {
                 path: '/login',

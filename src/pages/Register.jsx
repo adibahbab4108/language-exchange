@@ -1,20 +1,30 @@
 import React, { useContext } from 'react';
 import { authContext } from '../provider/AuthProvider';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
-    const { createUser } = useContext(authContext)
+    const { createUser, setUser, updateUserProfile } = useContext(authContext)
+    const navigate = useNavigate()
     const handleRegister = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
         const name = e.target.name.value;
+        const photoURL = e.target.photoURL.value;
         createUser(email, password)
             .then(userCredential => {
                 const user = userCredential.user;
-                console.log(user)
+                setUser(user)
+                updateUserProfile({ displayName: name, photoURL })
+                    .then(() => {
+                        toast.success("Registration Success!")
+                        navigate('/')
+                    })
+                // console.log(user)
             })
             .catch(error => {
-                alert(error)
+                toast.error(error.message)
                 return
             })
     }

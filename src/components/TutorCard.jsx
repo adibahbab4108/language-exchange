@@ -2,7 +2,7 @@ import { FaGraduationCap, FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const TutorCard = ({ tutor }) => {
-    const { name, email, image, language, description, review, price } = tutor;
+    const { _id, name, email, image, language, description, review, price } = tutor;
 
     return (
         <div className="flex flex-col md:flex-row border p-4 gap-4 bg-white rounded-lg shadow-md">
@@ -40,7 +40,7 @@ const TutorCard = ({ tutor }) => {
                         </div>
                     </div>
                     <div className="mt-4">
-                        <Link to="/tutor/:details" className="btn btn-primary w-full">Details</Link>
+                        <Link to={`/tutor/${_id}`} className="btn btn-primary w-full">Details</Link>
                     </div>
                 </div>
             </div>

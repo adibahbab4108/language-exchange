@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { authContext } from '../provider/AuthProvider';
+import { toast } from 'react-toastify';
 
 const Login = () => {
     const { loginUser, user, setUser } = useContext(authContext)
 
     const location = useLocation();
     const navigate = useNavigate();
-    
     const handleLogin = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
@@ -16,13 +16,13 @@ const Login = () => {
         loginUser(email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
-                // setUser(user)
-                navigate(location.state)
-                console.log(user)
+                setUser(user)
+                navigate(location.state || '/')
+                toast.success('Login Successfull')
             })
             .catch((error) => {
                 const errorCode = error.code;
-                console.log(errorCode)
+                toast.error(errorCode)
             });
     }
 

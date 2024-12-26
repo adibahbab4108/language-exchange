@@ -20,12 +20,10 @@ const UpdateTutorial = () => {
 
         try {
             const { data } = await axios.put(`${import.meta.env.VITE_API_URL}/update-tutorial/${_id}`, newFormData);
-            console.log(data)
             if (data.modifiedCount > 0)
                 toast.success('Tutorial updated successfully!');
             else return toast.error("Failed to update")
         } catch (error) {
-            console.error('Error updating tutorial:', error);
         }
     };
 

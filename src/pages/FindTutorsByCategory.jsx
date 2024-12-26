@@ -18,7 +18,6 @@ const FindTutorsByCategory = () => {
                 const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/find-tutors/${location.state}`);
                 setTutorsByCategory(data);
             } catch (error) {
-                console.error('Error fetching data:', error);
             }
         };
         fetchData();
