@@ -5,15 +5,15 @@ import { FaUser } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 
 const Navbar = () => {
-    const { user, loading, logOut } = useContext(authContext)
+    const { user, setLoading, logOut } = useContext(authContext)
 
     const handleLogOut = () => {
         logOut()
             .then(() => {
-                alert('Logged Out Successfully')
                 window.location.reload();
+                toast.success('Logged Out Successfully')
             }).catch((error) => {
-                alert(error)
+                toast.error(error)
             });
     }
 

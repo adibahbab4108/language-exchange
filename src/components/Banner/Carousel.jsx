@@ -1,37 +1,42 @@
-import React from 'react';
+import img1 from '../../assets/img1.jpg'
+import img2 from '../../assets/img2.jpg'
+import img3 from '../../assets/img3.jpg'
+import img4 from '../../assets/img4.jpg'
+import img5 from '../../assets/img5.jpg'
+import img6 from '../../assets/img6.jpg'
 
 const Carousel = () => {
     return (
         <div className="carousel carousel-center bg-neutral rounded-box max-w-md space-x-4 p-4">
             <div className="carousel-item">
                 <img
-                    src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
-                    className="rounded-box" />
+                    src={img1}
+                    className="rounded-box w-80" />
             </div>
             <div className="carousel-item">
                 <img
-                    src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
-                    className="rounded-box" />
+                   src={img2}
+                   className="rounded-box w-80" />
             </div>
             <div className="carousel-item">
                 <img
-                    src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
-                    className="rounded-box" />
+                    src={img3}
+                    className="rounded-box w-80" />
             </div>
             <div className="carousel-item">
                 <img
-                    src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
-                    className="rounded-box" />
+                 src={img4}
+                 className="rounded-box w-80" />
             </div>
             <div className="carousel-item">
                 <img
-                    src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp"
-                    className="rounded-box" />
+                   src={img5}
+                   className="rounded-box w-80" />
             </div>
             <div className="carousel-item">
                 <img
-                    src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
-                    className="rounded-box" />
+                    src={img6}
+                    className="rounded-box w-80" />
             </div>
             <div className="carousel-item">
                 <img
