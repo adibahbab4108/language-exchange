@@ -12,7 +12,7 @@ const TutorCard = ({ tutor }) => {
             <div className="w-full md:w-2/3 flex  justify-between">
                 <div className="mt-2">
                     <div>
-                        <h2 className="font-bold text-2xl">{name} ✅</h2>
+                        <h2 className="font-bold text-2xl text-black">{name} ✅</h2>
                         <small className="btn-xs bg-amber-200 rounded-sm px-2 py-1">Ostirrr</small>
                     </div>
                     <div className="flex items-center gap-2">
