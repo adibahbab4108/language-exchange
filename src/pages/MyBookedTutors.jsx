@@ -33,7 +33,7 @@ const MyBookedTutors = () => {
                     <div key={tutorial._id} className="card bg-white shadow-md rounded-lg p-4 flex flex-col items-center">
                         <img src={tutorial.tutorImg} alt={tutorial.tutorName} className="w-16 h-16 rounded-full mb-4" />
                         <div className="card-body text-center">
-                            <h3 className="text-lg font-semibold">{tutorial.tutorName}</h3>
+                            <h3 className="text-lg font-semibold text-gray-600">{tutorial.tutorName}</h3>
                             <p className="text-sm text-gray-600">{tutorial.tutorLang}</p>
                             <p className="text-sm text-gray-600">{tutorial.tutorDesc}</p>
                             <p className="text-sm text-gray-600">Price: ${tutorial.tutorPrice}</p>

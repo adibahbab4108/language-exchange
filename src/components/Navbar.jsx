@@ -1,11 +1,14 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { authContext } from '../provider/AuthProvider';
 import { FaUser } from 'react-icons/fa';
 import { toast } from 'react-toastify';
+import toggleTheme from './Toggle';
+import Toggle from './Toggle';
 
 const Navbar = () => {
     const { user, setLoading, logOut, loading } = useContext(authContext)
+
 
     const handleLogOut = () => {
         logOut()
@@ -18,7 +21,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -37,7 +40,7 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content  rounded-box z-[1] mt-3 w-52 p-2 shadow">
                         <li><NavLink to='/'>Home</NavLink></li>
                         <li><NavLink to='/find-tutors'>Find Tutors</NavLink></li>
                         <li><NavLink to='/add-tutorials'>Add Tutorials</NavLink></li>
@@ -57,6 +60,7 @@ const Navbar = () => {
 
                 </ul>
             </div>
+            <Toggle/>
             <div className="navbar-end">
                 {user ?
                     <>
@@ -70,7 +74,7 @@ const Navbar = () => {
                                 }
 
                             </div>
-                            <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                            <ul tabIndex={0} className="dropdown-content menu  rounded-box z-[1] w-52 p-2 shadow">
                                 <li onClick={() => { toast("this feature will be availabe soon!") }}><a>Update Profile</a></li>
                                 <li onClick={handleLogOut}> <a >Logout</a></li>
                             </ul>

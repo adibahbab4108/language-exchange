@@ -46,7 +46,7 @@ const MyTutorials = () => {
                             <table className="table">
                                 {/* head */}
                                 <thead>
-                                    <tr>
+                                    <tr className=' dark:text-white'>
                                         <th></th>
                                         <th>Profile</th>
                                         <th>Name</th>

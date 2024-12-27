@@ -30,57 +30,54 @@ const AddTutorials = () => {
 
 
     return (
-        <div className="min-h-screen bg-base-200">
-            <div className="hero-content flex-col lg:flex-row mx-auto">
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <form className="card-body" onSubmit={handleSubmit}>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Name</span>
+        <div className="min-h-screen ">
+            <div className="hero-content flex-col lg:flex-row mx-auto ">
+                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl ">
+                    <form className="card-body " onSubmit={handleSubmit}>
+                        <div className="form-control ">
+                            <label className="label ">
+                                <span className="label-text dark:text-white">Name</span>
                             </label>
                             <input
                                 type="text"
                                 name="name"
                                 value={user.displayName || "New User"}
-                                className="input input-bordered"
+                                className="input input-bordered dark:text-black"
                                 readOnly
                             />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Email</span>
+                                <span className="label-text text-white">Email</span>
                             </label>
                             <input
                                 type="email"
                                 name="email"
                                 value={user.email}
-                                className="input input-bordered"
+                                className="input input-bordered text-black"
                                 readOnly
                             />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Image</span>
+                                <span className="label-text dark:text-white">Image</span>
                             </label>
                             <input
                                 type="url"
                                 name="image"
-                                // value={formData.image}
-                                // onChange={handleChange}
+                                
                                 placeholder="Image URL"
-                                className="input input-bordered w-full"
+                                className="input input-bordered w-full text-black"
                             />
                         </div>
                         <div className="flex gap-3">
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Language</span>
+                                    <span className="label-text dark:text-white">Language</span>
                                 </label>
                                 <select
                                     name="language"
-                                    // value={formData.language}
-                                    // onChange={handleChange}
-                                    className="input input-bordered w-full"
+                                    className="input input-bordered w-full text-black"
                                 >
                                     <option value="" disabled>Select a language</option>
                                     <option value="English">English</option>
@@ -96,40 +93,36 @@ const AddTutorials = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Price</span>
+                                    <span className="label-text dark:text-white">Price</span>
                                 </label>
                                 <input
                                     type="number"
                                     name="price"
-                                    // value={formData.price}
-                                    // onChange={handleChange}
                                     placeholder="Price"
-                                    className="input input-bordered w-full"
+                                    className="input input-bordered w-full text-black"
                                 />
                             </div>
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Description</span>
+                                <span className="label-text dark:text-white">Description</span>
                             </label>
                             <textarea
                                 name="description"
-                                // value={formData.description}
-                                // onChange={handleChange}
                                 placeholder="Description"
-                                className="textarea textarea-bordered"
+                                className="textarea textarea-bordered text-black"
                             ></textarea>
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Review</span>
+                                <span className="label-text dark:text-white">Review</span>
                             </label>
                             <input
                                 type="number"
                                 name="review"
                                 value={user.review}
                                 readOnly
-                                className="input input-bordered"
+                                className="input input-bordered text-black"
                             />
                         </div>
                         <div className="form-control mt-6">
