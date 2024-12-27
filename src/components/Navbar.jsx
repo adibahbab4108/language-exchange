@@ -5,7 +5,7 @@ import { FaUser } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 
 const Navbar = () => {
-    const { user, setLoading, logOut } = useContext(authContext)
+    const { user, setLoading, logOut, loading } = useContext(authContext)
 
     const handleLogOut = () => {
         logOut()

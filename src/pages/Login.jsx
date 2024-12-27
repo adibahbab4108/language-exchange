@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { authContext } from '../provider/AuthProvider';
 import { toast } from 'react-toastify';
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
-    const { loginUser, user, setUser } = useContext(authContext)
+    const { loginUser, user, setUser, signInWithGoogle } = useContext(authContext)
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -20,6 +21,20 @@ const Login = () => {
                 navigate(location.state || '/')
                 toast.success('Login Successfull')
             })
+            .catch((error) => {
+                const errorCode = error.code;
+                toast.error(errorCode)
+            });
+    }
+
+
+    const handleGoogleLogin = () => {
+        signInWithGoogle().then(result => {
+            const user = result.user
+            setUser(user)
+            navigate(location.state || '/')
+            toast.success('Login Successfull')
+        })
             .catch((error) => {
                 const errorCode = error.code;
                 toast.error(errorCode)
@@ -53,6 +68,11 @@ const Login = () => {
                             <button className="btn btn-primary">Login</button>
                         </div>
                     </form>
+                    <div className="divider">OR</div>
+                    <div className='flex justify-center my-5'>
+                        <button onClick={handleGoogleLogin} className='btn'><FcGoogle className='text-xl' /></button>
+
+                    </div>
                     <p className="text-center my-4">
                         Don't have an account? <Link to='/register' className='link link-primary'>Register</Link>
                     </p>
