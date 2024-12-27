@@ -19,7 +19,9 @@ const DataProvider = ({ children }) => {
     }, [])
 
     const fetchAllTutorials = async () => {
-        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/find-tutors`)
+        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/find-tutors`,{
+            withCredentials: true
+        })
         setTutors(data)
     }
     const data = {

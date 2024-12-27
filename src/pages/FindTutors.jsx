@@ -8,7 +8,7 @@ import { CiSearch } from "react-icons/ci";
 const FindTutors = () => {
     const { tutors } = useContext(dataContext)
     const [filteredValue, setFilteredValue] = useState(tutors)
-    console.log(filteredValue)
+
 
     useEffect(() => {
         setFilteredValue(tutors);

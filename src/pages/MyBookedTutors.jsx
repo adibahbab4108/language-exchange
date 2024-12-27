@@ -6,7 +6,6 @@ import { toast } from "react-toastify";
 const MyBookedTutors = () => {
     const { user } = useContext(authContext);
     const [bookedTutorials, setBookedTutorial] = useState([]);
-    console.log(bookedTutorials);
 
     useEffect(() => {
         const fetchPostedTutorials = async () => {
@@ -14,7 +13,6 @@ const MyBookedTutors = () => {
                 if (user?.email) {
                     const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/my-booked-tutorials/${user.email}`);
                     setBookedTutorial(data);
-                    console.log('Fetched Data:', data);
                 }
             } catch (error) {
                 toast.error(error.message || 'Error fetching booked tutorials');

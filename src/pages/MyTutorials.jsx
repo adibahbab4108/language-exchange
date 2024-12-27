@@ -12,7 +12,8 @@ const MyTutorials = () => {
 
     const handleDelete = (id) => {
         try {
-            const { data } = axios.delete(`${import.meta.env.VITE_API_URL}/delete-tutorial/${id}`)
+            const { data } = axios.delete(`${import.meta.env.VITE_API_URL}/delete-tutorial/${id}`, {
+            })
             toast.success("Deleted Successfully")
             fetchPostedTutorials()
         } catch (error) {
@@ -27,7 +28,9 @@ const MyTutorials = () => {
 
     const fetchPostedTutorials = async () => {
         try {
-            const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/my-tutorials/${user?.email}`);
+            const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/my-tutorials/${user?.email}`,{
+                withCredentials: true,
+            });
             setPostedTutorials(data)
         } catch (error) {
             toast.error(error)
@@ -38,7 +41,7 @@ const MyTutorials = () => {
         <div className='container mx-auto  '>
             <div className="overflow-x-auto">
                 {
-                    postedTutorials.length >0 ?
+                    postedTutorials.length > 0 ?
                         <>
                             <table className="table">
                                 {/* head */}
@@ -76,7 +79,7 @@ const MyTutorials = () => {
                             </table>
                         </> :
                         <>
-                        <NoDataAvailabe/>
+                            <NoDataAvailabe />
                         </>
                 }
 

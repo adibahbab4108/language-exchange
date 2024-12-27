@@ -6,6 +6,7 @@ import {
     GoogleAuthProvider,
     signInWithPopup,
 } from "firebase/auth";
+import axios from "axios";
 
 const googleProvider = new GoogleAuthProvider();
 
@@ -14,7 +15,7 @@ export const authContext = createContext();
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-    
+
     const createUser = (email, password) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
@@ -41,7 +42,28 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
-            setLoading(false);
+
+            //jwt  er kaj karbar
+            if (currentUser?.email) {
+                const user = { email: currentUser.email }
+              
+                axios.post(`${import.meta.env.VITE_API_URL}/jwt`, user, {
+                    withCredentials: true
+                })
+                    .then(res => {
+                    
+                        setLoading(false);
+                    })
+            } else {
+                axios.post(`${import.meta.env.VITE_API_URL}/logout`, {}, {
+                    withCredentials: true
+                })
+                    .then(res => {
+                        setLoading(false);
+                    })
+            }
+
+
         });
         return () => unsubscribe();
     }, []);
