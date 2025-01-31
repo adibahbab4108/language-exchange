@@ -5,8 +5,6 @@ const Toggle = () => {
     return localStorage.getItem('theme') === 'dark';
   });
 
-  console.log(isDarkMode);
-
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
