@@ -6,7 +6,7 @@ import FeatureText from '../components/FeatureText';
 
 const Home = () => {
     return (
-        <div>
+        <div className=''>
             <Banner/>
             <FeatureText/>
             <Stats/>

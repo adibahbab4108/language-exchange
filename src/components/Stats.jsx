@@ -6,23 +6,23 @@ const Stats = () => {
         <div className='container mx-auto mt-14'>
             <div className='flex justify-between text-center flex-wrap gap-5'>
                 <div className='w-52 shadow-lg p-4 rounded-sm'>
-                    <h2 className='text-2xl font-bold text-gray-700'>32,000+</h2>
-                    <p className='text-gray-500 text-xl font-bold'>Experienced Tutors</p>
+                    <h2 className='text-2xl font-bold text-gray-700 dark:text-white'>32,000+</h2>
+                    <p className='text-gray-500 text-xl font-bold '>Experienced Tutors</p>
                 </div>
                 <div className='w-52 shadow-lg p-4 rounded-sm'>
-                    <h2 className='text-2xl font-bold text-gray-700'>30,0000+</h2>
+                    <h2 className='text-2xl font-bold text-gray-700 dark:text-white'>30,0000+</h2>
                     <p className='text-gray-500 text-xl font-bold'>5-star Tutor reviews</p>
                 </div>
                 <div className='w-52 shadow-lg p-4 rounded-sm'>
-                    <h2 className='text-2xl font-bold text-gray-700'>120+</h2>
+                    <h2 className='text-2xl font-bold text-gray-700 dark:text-white'>120+</h2>
                     <p className='text-gray-500 text-xl font-bold'>Subjact Taught</p>
                 </div>
                 <div className='w-52 shadow-lg p-4 rounded-sm'>
-                    <h2 className='text-2xl font-bold text-gray-700'>150+</h2>
+                    <h2 className='text-2xl font-bold text-gray-700 dark:text-white'>150+</h2>
                     <p className='text-gray-500 text-xl font-bold'>Tutor nationalities</p>
                 </div>
                 <div className='w-52 shadow-lg p-4 rounded-sm '>
-                    <h2 className='text-2xl font-bold text-gray-700'>4.8</h2>
+                    <h2 className='text-2xl font-bold text-gray-700 dark:text-white'>4.8</h2>
                     <p className='text-gray-500 text-xl font-bold'>On the app store</p>
                 </div>
             </div>

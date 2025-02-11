@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import { Bounce, ToastContainer } from 'react-toastify';
 const MainLayout = () => {
     return (
-        <div className='bg-white dark:bg-gray-800 dark:text-white'>
+        <div className='bg-white dark:bg-gray-800 dark:text-white'>  
             <Navbar />
             <Outlet />
             <Footer />

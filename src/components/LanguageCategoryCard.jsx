@@ -11,8 +11,8 @@ const LanguageCategoryCard = ({ languageCategory }) => {
         <Link to={`/find-tutors/${languageCategory.category}`} state={category} >
             <div className="dark:text-white">
                 <div className="flex border gap-3 p-4">
-                    <div className="place-content-center">
-                        <img src={icon} className="w-14" alt="icon" />
+                    <div className="place-content-center ">
+                        <img src={icon} className="w-14 dark:bg-white " alt="icon" />
                     </div>
                     <div>
                         <h1 className="text-2xl font-bold mb-2">{title}</h1>
