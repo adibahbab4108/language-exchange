@@ -5,7 +5,7 @@ const LanguageCategory = () => {
     const { languageCategories } = useContext(dataContext)
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 container mx-auto mt-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-14">
             {
                 languageCategories.map((languageCategory, idx) => <LanguageCategoryCard key={idx} languageCategory={languageCategory} />)
             }

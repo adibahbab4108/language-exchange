@@ -1,0 +1,59 @@
+[
+    {
+      "name": "Emily Johnson",
+      "image": "./users/user1.jpg",
+      "rating": 5,
+      "languageLearned": "Spanish",
+      "review": "This platform helped me achieve fluency in Spanish within months! The interactive lessons and native speakers made learning fun and engaging."
+    },
+    {
+      "name": "Carlos Fernández",
+      "image": "./users/user2.jpg",
+      "rating": 4.5,
+      "languageLearned": "English",
+      "review": "A fantastic resource for learning English! The AI-powered speech recognition really helped me improve my pronunciation."
+    },
+    {
+      "name": "Aisha Patel",
+      "image": "./users/user3.jpg",
+      "rating": 4,
+      "languageLearned": "French",
+      "review": "Great experience! The grammar exercises and daily quizzes kept me on track. Wish there were more advanced-level courses."
+    },
+    {
+      "name": "Hiroshi Tanaka",
+      "image": "./users/user4.jpg",
+      "rating": 5,
+      "languageLearned": "French",
+      "review": "I finally gained confidence in speaking French thanks to the conversation practice with native speakers. Highly recommend!"
+    },
+    {
+      "name": "Sophia Müller",
+      "image": "./users/user5.jpg",
+      "rating": 4.8,
+      "languageLearned": "German",
+      "review": "Loved the gamification aspect! Learning German felt like playing a game, and I stayed motivated throughout."
+    },
+    {
+      "name": "Ahmed Al-Farsi",
+      "image": "./users/user1.jpg",
+      "rating": 4.2,
+      "languageLearned": "Arabic",
+      "review": "The vocabulary builder is amazing, but I wish there were more real-world conversation examples for Arabic learners."
+    },
+    {
+      "name": "Maria Rossi",
+      "image": "./users/user3.jpg",
+      "rating": 5,
+      "languageLearned": "Italian",
+      "review": "The best language learning platform I’ve used! Italian lessons were structured perfectly, and I loved the cultural insights."
+    },
+    {
+      "name": "Jake Thompson",
+      "image": "./users/user5.jpg",
+      "rating": 4.7,
+      "languageLearned": "Japanese",
+      "review": "Very intuitive and user-friendly. The spaced repetition method helped me retain vocabulary much better than other apps."
+    }
+  ]
+  
