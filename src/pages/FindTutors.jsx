@@ -23,7 +23,7 @@ const FindTutors = () => {
     return (
         <div className="container mx-auto ">
             <label className="input input-bordered flex items-center gap-2 my-10">
-                <input onChange={handleSearch} type="text" className="grow text-black" placeholder="Search" />
+                <input onChange={handleSearch} type="text" className="grow text-black dark:bg-gray-900" placeholder="Search" />
                 <CiSearch />
             </label>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">

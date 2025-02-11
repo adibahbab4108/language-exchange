@@ -60,12 +60,10 @@ const Navbar = () => {
 
                 </ul>
             </div>
-            <Toggle/>
+            <Toggle />
             <div className="navbar-end">
                 {user ?
                     <>
-                        <h3 className=' mr-1'>Hello, {user?.displayName} </h3>
-
                         <div className="dropdown dropdown-hover dropdown-end">
                             <div tabIndex={0} role="button" className=" m-1">
                                 {
@@ -74,9 +72,9 @@ const Navbar = () => {
                                 }
 
                             </div>
-                            <ul tabIndex={0} className="dropdown-content menu  rounded-box z-[1] w-52 p-2 shadow">
-                                <li onClick={() => { toast("this feature will be availabe soon!") }}><a>Update Profile</a></li>
-                                <li onClick={handleLogOut}> <a >Logout</a></li>
+                            <ul tabIndex={0} className="dropdown-content menu  rounded-box z-[1] w-52 p-2 shadow dark:bg-gray-900 ">
+                                <li className='hover:bg-gray-700 hover:text-white rounded-box' onClick={() => { toast("this feature will be availabe soon!") }}><a>Update Profile</a></li>
+                                <li className='hover:bg-gray-700 hover:text-white  rounded-box' onClick={handleLogOut}> <a >Logout</a></li>
                             </ul>
                         </div>
                     </> :
