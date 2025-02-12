@@ -10,9 +10,9 @@ const HowItWorks = () => {
         <div className="py-10 mt-20">
             <div>
                 <SectionTitle title="How It Works" />
-                <div className="flex overflow-y-auto gap-4">
+                <div className="flex overflow-y-auto gap-4 ">
                     {/* Step 1 */}
-                    <div className="relative  p-4 border h-128 w-128 flex-shrink-0 ">
+                    <div className="relative  p-4 border h-128 w-128 flex-shrink-0 rounded-xl">
                         <h1 className="text-3xl w-12 h-12 grid place-content-center font-bold bg-green-500 rounded-md">1</h1>
                         <div >
                             <h1 className="text-4xl font-bold">Find your tutor</h1>
@@ -63,7 +63,7 @@ const HowItWorks = () => {
                         </div>
                     </div>
                     {/* Step 2 */}
-                    <div className="flex flex-col p-4 border h-128 w-128 flex-shrink-0 justify-around">
+                    <div className="flex flex-col p-4 border h-128 w-128 flex-shrink-0 justify-around rounded-xl">
                         <h1 className="text-3xl w-12 h-12 grid place-content-center font-bold bg-green-600 rounded-md">2</h1>
                         <h1 className="text-4xl font-bold">Start Learning</h1>
                         <p>Your tutor will guide the way through your first lesson and help you plan your next steps.</p>
@@ -71,7 +71,7 @@ const HowItWorks = () => {
 
                     </div>
                     {/* Step 3 */}
-                    <div className="flex flex-col p-4 border h-128 w-128 flex-shrink-0 justify-around">
+                    <div className="flex flex-col p-4 border h-128 w-128 flex-shrink-0 justify-around rounded-xl">
                         <h1 className="text-3xl w-12 h-12 grid place-content-center font-bold bg-green-700 rounded-md">3</h1>
                         <h1 className="text-4xl font-bold">Speak. Read. Write. Repeat.</h1>
                         <p>Choose how many lessons you want to take each week and get ready to reach your goals!</p>

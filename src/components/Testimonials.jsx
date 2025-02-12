@@ -29,7 +29,6 @@ const Testimonials = () => {
     }, []); 
 
     if (loading) return <p>Loading...</p>;
-    console.log(usersReview)
     return (
         <>
         <div className='py-10 mt-20'>
@@ -49,7 +48,7 @@ const Testimonials = () => {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-4xl mx-auto bg-white dark:bg-gray-900 rounded-xl  pb-10">
                                     {/* Image Section */}
                                     <div className="relative w-full flex justify-center">
-                                        <img src={userReview?.image} className="w-full h-96 object-cover rounded-xl shadow-md" />
+                                        <img src={userReview.image} className="w-full h-96 object-cover rounded-xl shadow-md" />
                                         <h2 className="absolute bottom-0 w-full  text-center font-bold text-lg bg-gray-700/70 px-4 py-2 text-white rounded-b-xl">
                                             {userReview.name}
                                         </h2>

@@ -46,7 +46,7 @@ const Carousel = () => {
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 onAutoplayTimeLeft={onAutoplayTimeLeft}
-                className="mySwiper  rounded-xl  h-96 w-96 "
+                className="mySwiper  rounded-xl  h-96 w-96"
             >
                 {/* Use images inside SwiperSlide */}
                 <SwiperSlide className="flex justify-center items-center">
@@ -67,9 +67,6 @@ const Carousel = () => {
                 <SwiperSlide className="flex justify-center items-center">
                     <img src={img6} alt="Slide 6" className='w-full h-full object-cover' />
                 </SwiperSlide>
-
-
-
             </Swiper>
         </>
     );

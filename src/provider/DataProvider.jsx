@@ -7,19 +7,18 @@ const DataProvider = ({ children }) => {
     const [tutors, setTutors] = useState([]);
     const [tutorsByCategory, setTutorsByCategory] = useState([]);
 
-    useEffect(() => {
-        fetch('/languageCategories.json')
-            .then(response => response.json())
-            .then(data => setLanguageCategories(data.languageCategories))
-            .catch(error => alert('Error fetching JSON:', error));
+    useEffect( () => {
+        fetchCategories()
+        fetchAllTutorials()
     }, []);
 
-    useEffect(() => {
-        fetchAllTutorials()
-    }, [])
 
+    const fetchCategories = async () => {
+        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/language-categories`)
+        setLanguageCategories(data)
+    }
     const fetchAllTutorials = async () => {
-        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/find-tutors`,{
+        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/find-tutors`, {
             withCredentials: true
         })
         setTutors(data)
