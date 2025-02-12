@@ -9,6 +9,7 @@ import 'swiper/css/navigation';
 // import required modules
 import { EffectFlip, Pagination, Navigation } from 'swiper/modules';
 import { useEffect, useState } from 'react';
+import SectionTitle from './shared/SectionTitle';
 
 const Testimonials = () => {
     const [usersReview, setUsersReview] = useState([]);
@@ -25,14 +26,14 @@ const Testimonials = () => {
                 console.error("Error fetching testimonials:", error);
                 setLoading(false);
             });
-    }, []); // Run only once when the component mounts
+    }, []); 
 
     if (loading) return <p>Loading...</p>;
     console.log(usersReview)
     return (
         <>
-        <div className='my-20'>
-            <h1 className='text-4xl font-bold text-center'>Reviews</h1>
+        <div className='py-10 mt-20'>
+            <SectionTitle title="Reviews"/>
             <Swiper
                 effect={'flip'}
                 grabCursor={true}
@@ -44,12 +45,12 @@ const Testimonials = () => {
                 {
                     usersReview.map((userReview, index) => (
                         <>
-                            <SwiperSlide key={index} className="p-6">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-4xl mx-auto bg-white dark:bg-gray-900 rounded-xl  p-6">
+                            <SwiperSlide key={index} >
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-4xl mx-auto bg-white dark:bg-gray-900 rounded-xl  pb-10">
                                     {/* Image Section */}
                                     <div className="relative w-full flex justify-center">
-                                        <img src={userReview?.image} className="w-80 h-80 md:w-96 md:h-96 object-cover rounded-xl shadow-md" />
-                                        <h2 className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center font-bold text-lg bg-gray-700/70 px-4 py-2 text-white rounded-b-xl">
+                                        <img src={userReview?.image} className="w-full h-96 object-cover rounded-xl shadow-md" />
+                                        <h2 className="absolute bottom-0 w-full  text-center font-bold text-lg bg-gray-700/70 px-4 py-2 text-white rounded-b-xl">
                                             {userReview.name}
                                         </h2>
                                     </div>

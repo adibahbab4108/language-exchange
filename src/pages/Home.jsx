@@ -4,6 +4,7 @@ import Stats from '../components/Stats';
 import LanguageCategory from '../components/LanguageCategory';
 import FeatureText from '../components/FeatureText';
 import Testimonials from '../components/Testimonials';
+import HowItWorks from '../components/HowItWorks';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <FeatureText/>
             <Stats/>
             <LanguageCategory/>
+            <HowItWorks/>
             <Testimonials/>
         </div>
     );
