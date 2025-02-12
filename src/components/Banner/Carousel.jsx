@@ -13,7 +13,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import img1 from '../../assets/img1.jpg';
 import img2 from '../../assets/img2.jpg';
 import img3 from '../../assets/img3.jpg';
-import img4 from '../../assets/img4.jpg';
+import img4 from '../../assets/user10.jpg';
 import img5 from '../../assets/img5.jpg';
 import img6 from '../../assets/img6.jpg';
 
@@ -49,12 +49,25 @@ const Carousel = () => {
                 className="mySwiper  rounded-xl  h-96 w-96 "
             >
                 {/* Use images inside SwiperSlide */}
-                <SwiperSlide ><img src={img1} alt="Slide 1" /></SwiperSlide>
-                <SwiperSlide><img src={img2} alt="Slide 2" /></SwiperSlide>
-                <SwiperSlide><img src={img3} alt="Slide 3" /></SwiperSlide>
-                <SwiperSlide><img src={img4} alt="Slide 4" /></SwiperSlide>
-                <SwiperSlide><img src={img5} alt="Slide 5" /></SwiperSlide>
-                <SwiperSlide><img src={img6} alt="Slide 6" /></SwiperSlide>
+                <SwiperSlide className="flex justify-center items-center">
+                    <img src={img1} alt="Slide 1" className='w-full h-full object-cover' />
+                </SwiperSlide>
+                <SwiperSlide className="flex justify-center items-center">
+                    <img src={img2} alt="Slide 2" className='w-full h-full object-cover' />
+                </SwiperSlide>
+                <SwiperSlide className="flex justify-center items-center">
+                    <img src={img3} alt="Slide 3" className='w-full h-full object-cover' />
+                </SwiperSlide>
+                <SwiperSlide className="flex justify-center items-center">
+                    <img src={img4} alt="Slide 4" className='w-full h-full object-cover' />
+                </SwiperSlide>
+                <SwiperSlide className="flex justify-center items-center">
+                    <img src={img5} alt="Slide 5" className='w-full h-full object-cover' />
+                </SwiperSlide>
+                <SwiperSlide className="flex justify-center items-center">
+                    <img src={img6} alt="Slide 6" className='w-full h-full object-cover' />
+                </SwiperSlide>
+
 
 
             </Swiper>
