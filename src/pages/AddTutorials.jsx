@@ -17,7 +17,7 @@ const AddTutorials = () => {
         const description = form.description.value;
         const review = form.review.value;
 
-        const formData = { name, email, image, language, price, description, review }
+        const formData = { name, email, image, language, price, description, review, status:"online", rating:0 }
 
         try {
             const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/add-tutorials`, formData)
@@ -32,7 +32,7 @@ const AddTutorials = () => {
     return (
         <div className="min-h-screen ">
             <div className="hero-content flex-col lg:flex-row mx-auto ">
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl ">
+                <div className="card flex-shrink-0 w-full max-w-2xl shadow-2xl ">
                     <form className="card-body " onSubmit={handleSubmit}>
                         <div className="form-control ">
                             <label className="label ">
