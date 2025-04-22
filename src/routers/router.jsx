@@ -13,6 +13,7 @@ import FindTutorsByCategory from "../pages/FindTutorsByCategory";
 import axios from "axios";
 import UpdateTutorial from "../pages/UpdateTutorial";
 import TutorDetails from "../pages/TutorDetails";
+import Dashboard from "../pages/Dashboard/Dashboard";
 
 const router = createBrowserRouter([
     {
@@ -63,9 +64,17 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register />
-            }
+            },
         ]
     },
+    {
+        path:"/dashboard",
+        element:<Dashboard/>,
+        errorElement:<ErrorPage/>,
+        // children[
+
+        // ]
+    }
 
 ]);
 export default router

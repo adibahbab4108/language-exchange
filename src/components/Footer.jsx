@@ -2,7 +2,7 @@ import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
+        <footer className="footer sm:footer-horizontal   p-10 mt-10 border-t">
             <aside>
                 <svg
                     width="50"
