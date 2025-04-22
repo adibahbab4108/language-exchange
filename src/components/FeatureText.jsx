@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 const FeatureText = () => {
     return (
-        <section className="relative bg-gray-100 py-20 mt-20 dark:bg-gray-700 ">
+        <section className="relative  py-20 mt-20 ">
             <div className=" px-6 md:px-12 flex flex-col-reverse md:flex-row items-center">
                 <div className="md:w-1/2 flex flex-col justify-center items-start space-y-6">
-                    <h2 className="text-4xl md:text-5xl font-bold leading-tight text-gray-600 dark:text-white ">
+                    <h2 className="text-4xl md:text-5xl font-bold leading-tight ">
                         Welcome to Your Dream Platform
                     </h2>
-                    <p className="text-lg md:text-xl text-gray-400 ">
+                    <p className="text-lg md:text-xl ">
                         Experience the future of interactions with our state-of-the-art features. Join us and embark on a journey towards excellence.
                     </p>
                 </div>

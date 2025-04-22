@@ -9,14 +9,14 @@ const LanguageCategoryCard = ({ languageCategory }) => {
 
     return (
         <Link to={`/find-tutors/${languageCategory.category}`} state={category} >
-            <div className="dark:text-white">
+            <div className="">
                 <div className="flex border gap-3 p-4">
                     <div className="place-content-center ">
-                        <img src={icon} className="w-14 dark:bg-white " alt="icon" />
+                        <img src={icon} className="w-14 " alt="icon" />
                     </div>
                     <div>
                         <h1 className="text-2xl font-bold mb-2">{title}</h1>
-                        <p className="text-gray-500 font-bold">{numberOfTeachers} teachers</p>
+                        <p className="font-bold">{numberOfTeachers} teachers</p>
                     </div>
                     <div className="place-content-center ml-auto">
                         <TfiAngleRight className="text-3xl" />

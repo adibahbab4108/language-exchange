@@ -30,7 +30,7 @@ const MyBookedTutors = () => {
             <h1 className="text-center my-10 font-bold text-2xl">My Booked Tutors</h1>
             <div className="w-full p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {bookedTutorials.map(tutorial => (
-                    <div key={tutorial._id} className="card  shadow-md rounded-lg p-4 flex flex-col items-center dark:bg-gray-900">
+                    <div key={tutorial._id} className="card  shadow-md rounded-lg p-4 flex flex-col items-center">
                         <img src={tutorial.tutorImg} alt={tutorial.tutorName} className="w-16 h-16 rounded-full mb-4" />
                         <div className="card-body text-center">
                             <h3 className="text-lg font-semibold text-gray-500">{tutorial.tutorName}</h3>

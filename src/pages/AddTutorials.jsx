@@ -36,13 +36,13 @@ const AddTutorials = () => {
                     <form className="card-body " onSubmit={handleSubmit}>
                         <div className="form-control ">
                             <label className="label ">
-                                <span className="label-text dark:text-white">Name</span>
+                                <span className="label-text ">Name</span>
                             </label>
                             <input
                                 type="text"
                                 name="name"
                                 value={user.displayName || "New User"}
-                                className="input input-bordered dark:text-black"
+                                className="input input-bordered"
                                 readOnly
                             />
                         </div>
@@ -60,7 +60,7 @@ const AddTutorials = () => {
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text dark:text-white">Image</span>
+                                <span className="label-text ">Image</span>
                             </label>
                             <input
                                 type="url"
@@ -73,7 +73,7 @@ const AddTutorials = () => {
                         <div className="flex gap-3">
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text dark:text-white">Language</span>
+                                    <span className="label-text ">Language</span>
                                 </label>
                                 <select
                                     name="language"
@@ -93,7 +93,7 @@ const AddTutorials = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text dark:text-white">Price</span>
+                                    <span className="label-text ">Price</span>
                                 </label>
                                 <input
                                     type="number"
@@ -105,7 +105,7 @@ const AddTutorials = () => {
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text dark:text-white">Description</span>
+                                <span className="label-text ">Description</span>
                             </label>
                             <textarea
                                 name="description"
@@ -115,7 +115,7 @@ const AddTutorials = () => {
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text dark:text-white">Review</span>
+                                <span className="label-text ">Review</span>
                             </label>
                             <input
                                 type="number"

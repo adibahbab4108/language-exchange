@@ -19,7 +19,7 @@ const HowItWorks = () => {
                             <p>We'll connect you with a tutor who will motivate, challenge, and inspire you.</p>
                         </div>
                         <div className="p-3 ">
-                            <div className="flex gap-4 border w-[28rem] absolute bottom-48 bg-white dark:bg-gray-900 rounded-lg overflow-hidden">
+                            <div className="flex gap-4 border w-[28rem] absolute bottom-48 bg-white rounded-lg overflow-hidden">
                                 <img src={tutor1} className="w-24 h-24 object-cover" alt="" />
                                 <div className=" p-4 flex-shrink-0">
                                     <p className="flex items-center gap-2">
@@ -33,7 +33,7 @@ const HowItWorks = () => {
 
                                 </div>
                             </div>
-                            <div className="flex gap-4 border  w-[28rem] absolute bottom-28  left-10 bg-white dark:bg-gray-900  rounded-lg overflow-hidden">
+                            <div className="flex gap-4 border  w-[28rem] absolute bottom-28  left-10  rounded-lg overflow-hidden">
                                 <img src={tutor2} className="w-24 h-24 object-cover" alt="" />
                                 <div className="p-4 flex-shrink-0">
                                     <p className="flex items-center gap-2">
@@ -47,7 +47,7 @@ const HowItWorks = () => {
 
                                 </div>
                             </div>
-                            <div className="flex gap-4 border  w-[28rem] absolute bottom-6 left-12 bg-white dark:bg-gray-900  rounded-lg overflow-hidden">
+                            <div className="flex gap-4 border  w-[28rem] absolute bottom-6 left-12 bg-white rounded-lg overflow-hidden">
                                 <img src={tutor3} className="w-24 h-24 object-cover" alt="" />
                                 <div className="p-4 flex-shrink-0">
                                     <p className="flex items-center gap-2">

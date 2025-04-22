@@ -39,12 +39,12 @@ const FindTutors = () => {
         <div className="container mx-auto ">
             <div className="grid grid-cols-12 gap-2">
                 <label className="input input-bordered flex items-center gap-2 my-10 col-span-8">
-                    <input onChange={handleSearch} type="text" className="grow text-black dark:bg-gray-900" placeholder="Search" />
+                    <input onChange={handleSearch} type="text" className="grow text-black" placeholder="Search" />
                     <CiSearch />
                 </label>
 
-                <label className="flex items-center gap-2 my-10 col-span-4  border-gray-300 rounded-lg bg-white dark:bg-gray-800 ">
-                    <span className="ml-2 text-gray-400 dark:text-gray-200 font-semibold">Sort by:</span>
+                <label className="flex items-center gap-2 my-10 col-span-4  border-gray-300 rounded-lg bg-white ">
+                    <span className="ml-2 text-gray-400 font-semibold">Sort by:</span>
                     <select
                         onChange={handleSort}
                         name="sort"

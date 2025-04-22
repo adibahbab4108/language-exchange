@@ -45,7 +45,7 @@ const Testimonials = () => {
                     usersReview.map((userReview, index) => (
                         <>
                             <SwiperSlide key={index} >
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-4xl mx-auto bg-white dark:bg-gray-900 rounded-xl  pb-10">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-4xl mx-auto rounded-xl  pb-10">
                                     {/* Image Section */}
                                     <div className="relative w-full flex justify-center">
                                         <img src={userReview.image} className="w-full h-96 object-cover rounded-xl shadow-md" />
@@ -57,15 +57,15 @@ const Testimonials = () => {
                                     {/* Review Section */}
                                     <div className="flex flex-col justify-center gap-4 text-center md:text-left">
                                         {/* Review Text */}
-                                        <p className="text-xl text-gray-700 dark:text-gray-300 italic leading-relaxed">
-                                            <span className="text-4xl text-gray-500">“</span>
+                                        <p className="text-xl  italic leading-relaxed">
+                                            <span className="text-4xl ">“</span>
                                             {userReview.review}
-                                            <span className="text-4xl text-gray-500">”</span>
+                                            <span className="text-4xl">”</span>
                                         </p>
 
                                         {/* Rating Section */}
                                         <div className="flex flex-col items-center md:items-start">
-                                            <span className="font-semibold text-gray-800 dark:text-gray-300">Rating:</span>
+                                            <span className="font-semibold text-gray-800 ">Rating:</span>
                                             <div className="rating rating-sm flex">
                                                 {Array.from({ length: 5 }).map((_, i) => (
                                                     <input
@@ -80,7 +80,7 @@ const Testimonials = () => {
                                         </div>
 
                                         {/* Language Learned */}
-                                        <div className="text-gray-600 dark:text-gray-400 ">
+                                        <div className="text-gray-600">
                                             <span className="font-bold  ">Language Learned:</span> <span className=''>{userReview.languageLearned}</span>
                                         </div>
                                     </div>

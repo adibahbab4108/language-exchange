@@ -19,9 +19,9 @@ const Navbar = () => {
                 toast.error(error)
             });
     }
-
+    console.log(localStorage.getItem("theme") === 'light')
     return (
-        <div className="navbar fixed z-10 bg-white dark:bg-gray-600/80">
+        <div className={`navbar fixed z-10 ${localStorage.getItem("theme") === 'light' ? 'bg-white' : 'bg-black'}`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -74,8 +74,8 @@ const Navbar = () => {
                                 }
 
                             </div>
-                            <ul tabIndex={0} className="dropdown-content menu  rounded-box z-[1] w-52 p-2 shadow dark:bg-gray-900 ">
-                                <li className='hover:bg-gray-700 hover:text-white rounded-box' onClick={() => { toast("this feature will be availabe soon!") }}><a>Update Profile</a></li>
+                            <ul tabIndex={0} className="dropdown-content menu  rounded-box z-[1] w-52 p-2 shadow ">
+                                <li className='hover:bg-gray-700 hover:text-white rounded-box' onClick={() => { toast("this feature will be availabe soon!") }}><a>Dashboard</a></li>
                                 <li className='hover:bg-gray-700 hover:text-white  rounded-box' onClick={handleLogOut}> <a >Logout</a></li>
                             </ul>
                         </div>
