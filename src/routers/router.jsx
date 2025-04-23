@@ -14,6 +14,7 @@ import axios from "axios";
 import UpdateTutorial from "../pages/UpdateTutorial";
 import TutorDetails from "../pages/TutorDetails";
 import Dashboard from "../pages/Dashboard/Dashboard";
+import UserProfile from "../pages/Dashboard/UserProfile";
 
 const router = createBrowserRouter([
     {
@@ -71,9 +72,16 @@ const router = createBrowserRouter([
         path:"/dashboard",
         element:<Dashboard/>,
         errorElement:<ErrorPage/>,
-        // children[
-
-        // ]
+        children:[
+            {
+                path:"profile",
+                element:<UserProfile/>
+            },
+            {
+                path:"update-profile",
+                element:<UserProfile/>
+            },
+        ]
     }
 
 ]);

@@ -3,12 +3,12 @@ import Sidebar from "./Sidebar";
 
 const Dashboard = () => {
     return (
-        <div className="grid grid-cols-12 min-h-screen">
+        <div className="flex min-h-screen">
             {/* Sidebar */}
-            <div className="col-span-3">
+            <div className="">
                 <Sidebar />
             </div>
-            <div className="col-span-9 p-4">
+            <div className="flex-1">
                 <Outlet />
             </div>
         </div>
