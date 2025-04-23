@@ -61,7 +61,7 @@ const Navbar = () => {
                                 <FaUser size={24} />
                             )}
                         </button>
-                        <ul tabIndex={0} className="dropdown-content menu rounded-box z-[1] w-52 p-2 bg-white">
+                        <ul tabIndex={0} className="dropdown-content menu rounded-box z-[1] w-52 p-2 bg-black">
                             <li>
                                 <Link
                                     to="/dashboard"
