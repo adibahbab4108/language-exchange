@@ -15,6 +15,8 @@ import UpdateTutorial from "../pages/UpdateTutorial";
 import TutorDetails from "../pages/TutorDetails";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import UserProfile from "../pages/Dashboard/UserProfile";
+import UserDashboard from "../pages/Dashboard/UserDashboard";
+import UpdateUser from "../pages/Dashboard/UpdateUser";
 
 const router = createBrowserRouter([
     {
@@ -69,17 +71,21 @@ const router = createBrowserRouter([
         ]
     },
     {
-        path:"/dashboard",
-        element:<Dashboard/>,
-        errorElement:<ErrorPage/>,
-        children:[
+        path: "/dashboard",
+        element: <Dashboard />,
+        errorElement: <ErrorPage />,
+        children: [
             {
-                path:"profile",
-                element:<UserProfile/>
+                path: '',
+                element: <UserDashboard/>
             },
             {
-                path:"update-profile",
-                element:<UserProfile/>
+                path: "profile",
+                element: <UserProfile />
+            },
+            {
+                path: "update-profile",
+                element: <UpdateUser />
             },
         ]
     }

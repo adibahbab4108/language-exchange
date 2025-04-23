@@ -29,7 +29,7 @@ const Navbar = () => {
     );
 
     return (
-        <div className={`navbar fixed z-10 ${localStorage.getItem("theme") === 'light' ? 'bg-black text-white' : ''}`}>
+        <div className={`navbar fixed z-10 bg-black text-white`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <button tabIndex={0} className="btn btn-ghost lg:hidden" aria-label="menu">

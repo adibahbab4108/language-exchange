@@ -4,6 +4,7 @@ import Loading from "../../components/Loading";
 
 const UserProfile = () => {
     const { user } = useContext(authContext)
+    console.log(user)
 if(!user) return <Loading/>
     return (
         <div className=" shadow-lg rounded-2xl">
@@ -15,6 +16,7 @@ if(!user) return <Loading/>
                 />
                 <h2 className="text-2xl font-bold mt-4">{user?.displayName}</h2>
                 <p className="text-gray-600 text-sm">{user?.email}</p>
+                <p className="text-gray-600 text-sm">{user?.phoneNumber}</p>
 
                 <div className="mt-2">
                     <span
