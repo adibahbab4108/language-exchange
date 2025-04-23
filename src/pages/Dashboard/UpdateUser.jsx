@@ -30,7 +30,7 @@ const UpdateUser = () => {
     };
 
     return (
-        <div className="max-w-md mx-auto mt-10 p-6 bg-white shadow-lg rounded-xl">
+        <div className="max-w-md mx-auto mt-10 p-6 shadow-lg rounded-xl">
             <h2 className="text-2xl font-bold text-center mb-4">Update Profile</h2>
             <form onSubmit={handleUpdate} className="flex flex-col gap-4">
                 <label className="text-sm font-semibold">Name</label>
@@ -42,7 +42,7 @@ const UpdateUser = () => {
                     onChange={(e) => setName(e.target.value)}
                     required
                 />
-                
+
                 {/* <label className="text-sm font-semibold">Phone</label>
                 <input
                     type="text"
